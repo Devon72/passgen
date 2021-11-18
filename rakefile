@@ -1,0 +1,11 @@
+desc 'Builds gems'
+task :build do
+  system('gem', 'build')
+end
+
+desc 'Installs as a Geode'
+task install: [:build] do
+  FileList['*.gem'].each do |gem|
+    system('gem', 'install', gem)
+  end
+end

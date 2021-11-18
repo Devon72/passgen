@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |spec|
   spec.name                   = 'passgen'
-  spec.version                = 'v0.1.0'
+  spec.version                = '0.1.0'
   spec.summary                = 'password generator'
   spec.authors                = ['Devon Huxtable']
   spec.email                  = 'devon.huxtable@gmail.com'

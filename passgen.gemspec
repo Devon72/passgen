@@ -2,6 +2,8 @@
 
 # Created by Devon Huxtable <devon.huxtable@gmail.com>, November 2021.
 
+require 'rake'
+
 Gem::Specification.new do |spec|
   spec.name                   = 'passgen'
   spec.version                = '0.1.0'

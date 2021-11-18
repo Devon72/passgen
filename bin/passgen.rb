@@ -1,42 +1,7 @@
-=begin
-Step 1: Build a data set of characters.
-Step 2: Generate a random number between 0 and dataset length and add that to the password
-Step 3: Repeat step 2 for the length of the password
-Step 4: Print the password (Or copy it to the pasteboard)
+#!/usr/bin/env ruby -w
+# frozen_string_literal: true
 
-Step 1.1: Shuffle the Dataset
-Step 2.1: Use a solid random number generator. 
-The .1 steps arent needed but will make a better product
-
-Where -<integer> is the length
--p copies it to pasteboard instead of printing it
--a is lowercase alpha
--A is uppercase alpha
--n is numarics
--s is the full set of symbols
-And everything after a -- is included in the mix. 
-`pwgen -64 -paAn -- “~!/<>,”` Would produce a 64 character password, copy it to the pasteboard, where the password would contain a-z, A-Z, 0-9, and ~!/<>,
-Get it working with a predefined set and work from there though
-=end
-
-=begin
-require 'securerandom'
-
-class PasswordGenerator
-
-data = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()<>[](){}\\/|".split.shuffle.to_s
-password = String.new
-
-puts "How many characters do you want your password to be?"
-pass_length = gets.chomp.to_i
-
-pass_length.times do
-password << data[rand(data.length)]
-end
-
-print password
-end
-=end
+# Created by Devon Huxtable <devon.huxtable@gmail.com>, November 2021.
 
 require 'securerandom'
 require 'optparse'

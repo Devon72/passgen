@@ -30,7 +30,7 @@ class PasswordGenerator
     opts[:symbol] = false
     opts[:length] = 0
     
-    opt_parser = OptionParser.new do |op|
+    OptionParser.new do |op|
       op.on("-a", "--alpha")     { |n| opts[:alpha] = true  }
       op.on("-A", "--alpha-cap") { |n| opts[:alpha_caps] = true  }
       op.on("-n", "--numeric")   { |n| opts[:numeric] = true  }
